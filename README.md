@@ -1,5 +1,5 @@
 # contact_form
-[TOP](https://github.com/palhina/contact_form/assets/129643430/e6a9d99c-e7c8-4c91-a799-11322e1fe3e7)
+![TOP](https://github.com/palhina/contact_form/assets/129643430/e6a9d99c-e7c8-4c91-a799-11322e1fe3e7)
 
 ## 概要：
 お客様にお問い合わせを作成・確認していただく
@@ -26,7 +26,8 @@
 Laravel8.83.8
 
 ## テーブル設計
-[テーブル設計](https://github.com/palhina/contact_form/assets/129643430/e843221f-4d96-4718-983b-2c8fdeb31889)
+![テーブル設計](https://github.com/palhina/contact_form/assets/129643430/e843221f-4d96-4718-983b-2c8fdeb31889)
 
 ## ER図
+![ER図](https://github.com/palhina/contact_form/assets/129643430/b3defa98-3aaf-4c2c-beec-ea3d3fe5759a)
 
