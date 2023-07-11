@@ -1,0 +1,30 @@
+.thanks__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+}
+
+.thanks__heading {
+    text-align: center;
+}
+
+.thanks__message {
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.form__button {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.form__button-redirect {
+    padding: 10px;
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}

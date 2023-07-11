@@ -1,0 +1,94 @@
+.contact-form__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+}
+
+.contact-form__heading {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.form {
+    margin: 0 auto;
+    width: 70%;
+}
+
+.form__group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form__name-input {
+    display: flex;
+    justify-content: space-around;
+}
+
+.form__label--required {
+    color: #ff0000;
+}
+
+.form__example {
+    color: #ddd;
+}
+
+.form__error {
+    color: #ff0000;
+    border-bottom: 30px;
+}
+
+.gender-selection{
+    display: flex;
+    justify-content: space-between;
+}
+
+.gender-selection__btn{
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__last-name input,
+.form__first-name input
+{
+    padding: 10px;
+    width: 250px;
+    margin: 0 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    appearance: none;
+}
+
+.form__input--text input,
+.form__input--textarea textarea {
+    padding: 10px;
+    width: 500px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin-right: 0;
+    appearance: none;
+}
+
+.form__input--text input {
+    height: 40px;
+}
+
+.form__input--textarea textarea {
+    height: 180px;
+}
+
+.form__button {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.form__button-submit {
+    padding: 10px;
+    width: 30%;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
