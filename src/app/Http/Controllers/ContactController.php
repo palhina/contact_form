@@ -33,6 +33,12 @@ class ContactController extends Controller
     $request->session()->flash('_old_input',[
             'last_name' => $lastname,
             'first_name' => $firstname,
+            'gender' =>$gender,
+            'email'=>$email,
+            'postcode'=>$postcode,
+            'address'=>$address,
+            'building_name'=>$building_name,
+            'opinion'=>$opinion
         ]);
     return redirect()->route('index');
     }
