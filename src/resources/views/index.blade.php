@@ -20,7 +20,7 @@
                         <div class="form__name-input">
                             <div class="form__last-name">
                                 <div class="form__last-name-text">
-                                    <input type="text" name="last_name" value="{{ old('last_name') }}" />
+                                    <input type="text" name="lastname" value="{{ old('lastname') }}" />
                                 </div>
                                 <div class="form__example">
                                     例）山田
@@ -28,7 +28,7 @@
                             </div>
                             <div class="form__first-name">
                                 <div class="form__first-name-text">
-                                    <input type="text" name="first_name" value="{{ old('first_name') }}"/>
+                                    <input type="text" name="firstname" value="{{ old('firstname') }}"/>
                                 </div>
                                 <div class="form__example">
                                     例）太郎

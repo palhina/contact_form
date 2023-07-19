@@ -15,8 +15,8 @@ class ContactController extends Controller
     }
     public function confirm(ContactRequest $request)
     {
-    $lastname = $request->input('last_name');
-    $firstname = $request->input('first_name');
+    $lastname = $request->input('lastname');
+    $firstname = $request->input('firstname');
     $fullname = $lastname . $firstname;
     $contact = $request->only(['gender','email', 'postcode', 'address', 'building_name', 'opinion']);
     return view('confirm', compact('fullname','contact'));
@@ -30,16 +30,7 @@ class ContactController extends Controller
     // 修正ボタンの挙動
     public function edit(Request $request)
     {
-    $request->session()->flash('_old_input',[
-            'last_name' => $lastname,
-            'first_name' => $firstname,
-            'gender' =>$gender,
-            'email'=>$email,
-            'postcode'=>$postcode,
-            'address'=>$address,
-            'building_name'=>$building_name,
-            'opinion'=>$opinion
-        ]);
+    $request->session()->flash('_old_input', $request->all());
     return redirect()->route('index');
     }
 

@@ -24,8 +24,8 @@ class ContactRequest extends FormRequest
     public function rules()
     {
         return [
-            'last_name' => ['required','string'],
-            'first_name' => ['required','string'],
+            'lastname' => ['required','string'],
+            'firstname' => ['required','string'],
             'gender' => ['required'],
             'email' => ['required', 'string', 'email'],
             'postcode' => ['required', 'regex:/^[0-9]{3}-[0-9]{4}$/' ],
@@ -41,10 +41,10 @@ class ContactRequest extends FormRequest
     public function messages()
     {
         return[
-            'last_name.required' => '苗字を入力してください',
-            'last_name.string' => '苗字を文字列で入力してください',
-            'first_name.required' => '名前を入力してください',
-            'first_name.string' => '名前を文字列で入力してください',
+            'lastname.required' => '苗字を入力してください',
+            'lastname.string' => '苗字を文字列で入力してください',
+            'firstname.required' => '名前を入力してください',
+            'firstname.string' => '名前を文字列で入力してください',
             'gender.required' => '性別を入力してください',
             'email.required' => 'メールアドレスを入力してください',
             'email.string' => 'メールアドレスを文字列で入力してください',

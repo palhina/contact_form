@@ -13,7 +13,7 @@ use App\Http\Controllers\ContactController;
 |
 */
 
-Route::get('/', [ContactController::class, 'index'])->name('indexS');
+Route::get('/', [ContactController::class, 'index'])->name('index');
 Route::post('/contacts/confirm', [ContactController::class, 'confirm']);
 Route::post('/contacts', [ContactController::class, 'store']);
 // 修正ボタン
