@@ -13,11 +13,11 @@ use App\Http\Controllers\ContactController;
 |
 */
 
-Route::get('/', [ContactController::class, 'index']);
+Route::get('/', [ContactController::class, 'index'])->name('indexS');
 Route::post('/contacts/confirm', [ContactController::class, 'confirm']);
 Route::post('/contacts', [ContactController::class, 'store']);
 // 修正ボタン
-Route::post('/redirect', [ContactController::class, 'redirect']);
+Route::post('/edit', [ContactController::class, 'edit']);
 //サンクスページからindexページへ戻る
 Route::get('/return', [ContactController::class, 'return']);
 // 以下、管理画面の操作
