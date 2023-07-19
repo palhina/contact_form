@@ -27,13 +27,21 @@ class ContactController extends Controller
     Contact::create($data);
     return view('thanks');
     }
-    public function redirect(Request $request)
+    // 修正ボタンの挙動
+    public function edit(Request $request)
     {
-    $lastname = $request->input('last_name');
-    $firstname = $request->input('first_name');
-    $contact = $request->only(['gender','email', 'postcode', 'address', 'building_name', 'opinion']);
-    return view('index', compact('contact'));
+    $request->session()->flash('_old_input',[
+            'last_name' => $lastname,
+            'first_name' => $firstname,
+        ]);
+    return redirect()->route('index');
     }
+
+    public function return()
+    {
+        return view('index');
+    }
+
     public function manage()
     {
     $contacts = Contact::paginate(10);
