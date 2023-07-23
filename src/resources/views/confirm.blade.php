@@ -61,9 +61,6 @@
                     <button class="form__button-submit" type="submit">送信</button>
                 </div>
             </form>
-            <form class="form__revice" action="/edit" method="post">
-                @csrf
-                <button class="form__button-revice" type="submit">修正する</button>
-            </form>
+            <a class="edit_btn" href="javascript:history.back()">修正する</a>
         </div>
 @endsection

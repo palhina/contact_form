@@ -34,21 +34,6 @@ class Contact extends Model
         if (!empty($fullname)) {
             $query->where('fullname', 'like', '%'.$fullname.'%');
         }
-        if (!empty($gender)) {
-            if ($gender !== '') {
-                $query->where('gender', $gender);
-            }
-        }
-        if (!empty($start_date)){
-            $query->whereDate('created_at','>=',$start_date);
-        }
-        if (!empty($end_date)){
-            $query->whereDate('created_at','<=',$end_date);
-        }
-
-        if (!empty($email)) {
-            $query->where('email', 'like', '%'.$email.'%');
-        }
         return $query;
     }
 }

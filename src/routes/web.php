@@ -13,15 +13,16 @@ use App\Http\Controllers\ContactController;
 |
 */
 
-Route::get('/', [ContactController::class, 'index'])->name('index');
+Route::get('/', [ContactController::class, 'index']);
 Route::post('/contacts/confirm', [ContactController::class, 'confirm']);
 Route::post('/contacts', [ContactController::class, 'store']);
-// 修正ボタン
-Route::post('/edit', [ContactController::class, 'edit']);
 //サンクスページからindexページへ戻る
 Route::get('/return', [ContactController::class, 'return']);
 // 以下、管理画面の操作
 Route::get('/manage', [ContactController::class, 'manage']);
-Route::post('/contact/search', [ContactController::class, 'search']);
+// 検索ボタン
+Route::get('/contact/search', [ContactController::class, 'search']);
+// リセットボタン
 Route::get('/manage/reset', [ContactController::class, 'reset']);
+// データの削除
 Route::delete('/manage/{contact_id}', [ContactController::class, 'destroy']);

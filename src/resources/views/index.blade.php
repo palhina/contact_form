@@ -2,6 +2,7 @@
 
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/index.css') }}" />
+<script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
 @endsection
 
 @section('content')
@@ -36,12 +37,12 @@
                             </div>
                         </div>
                         <div class="form__error">
-                                @error('last_name')
+                                @error('lastname')
                                 {{ $message }}
                                 @enderror
                         </div>
                         <div class="form__error">
-                                @error('first_name')
+                                @error('firstname')
                                 {{ $message }}
                                 @enderror
                         </div>
@@ -85,14 +86,16 @@
                         </div>
                     </div>
             </div>
-            <div class="form__group">
+        <form class="h-adr">
+        <span class="p-country-name" style="display:none;">Japan</span>
+                <div class="form__group">
                     <div class="form__group-title">
                         <span class="form__label--item">郵便番号</span>
                         <span class="form__label--required">※</span>
                     </div>
                     <div class="form__group-content">
                         <div class="form__input--text">
-                            <input type="text" name="postcode" value="{{ old('postcode') }}"/>
+                            <input type="text" name="postcode" class="p-postal-code" size="8" maxlength="8" value="{{ old('postcode') }}"/>
                         </div>
                         <div class="form__example">
                             例）123-4567
@@ -111,7 +114,7 @@
                     </div>
                     <div class="form__group-content">
                         <div class="form__input--text">
-                            <input type="text" name="address" value="{{ old('address') }}"/>
+                            <input type="text" name="address" class="p-region p-locality p-street-address p-extended-address" value="{{ old('address') }}"/>
                         </div>
                         <div class="form__example">
                             例）東京都渋谷区千駄ヶ谷1-2-3
@@ -123,6 +126,7 @@
                         </div>
                     </div>
             </div>
+        </form>
             <div class="form__group">
                     <div class="form__group-title">
                         <span class="form__label--item">建物名</span>
