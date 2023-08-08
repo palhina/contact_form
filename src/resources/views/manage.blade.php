@@ -26,7 +26,7 @@
                             </div>
                             <div class="form__group-content">
                                 <div class="form__input--text">
-                                    <input class="search-form__item-input" type="text" name="fullname" value="">
+                                    <input class="search-form__item-input" type="text" name="fullname" value="{{ old('fullname') }}">
                                 </div>
                             </div>
                         </div>

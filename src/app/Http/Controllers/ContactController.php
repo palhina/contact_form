@@ -50,8 +50,8 @@ class ContactController extends Controller
     public function search(Request $request)
     {
         $contacts = Contact::with('contact')->FullnameSearch($request->fullname)->get();
-        $contacts = Category::all();
-        return view('results', compact('contacts'));
+        $contacts = Contact::all();
+        return view('manage', compact('contacts'));
     }
     // データの削除
     public function destroy(Request $request)
