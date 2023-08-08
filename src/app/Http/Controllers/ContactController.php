@@ -49,12 +49,9 @@ class ContactController extends Controller
     //検索機能
     public function search(Request $request)
     {
-    $item = Author::where('fullname', 'LIKE',"%{$request->input}%")->get();
-        $param = [
-            'input' => $request->input,
-            'item' => $item
-        ];
-    return view('result', $param);
+        $contacts = Contact::with('contact')->FullnameSearch($request->fullname)->get();
+        $contacts = Category::all();
+        return view('results', compact('contacts'));
     }
     // データの削除
     public function destroy(Request $request)

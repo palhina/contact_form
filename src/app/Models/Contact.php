@@ -29,11 +29,10 @@ class Contact extends Model
         'opinion' => ['required', 'string','max:120'],
     );
 
-    public function scopeContactSearch($query, $fullname, $gender, $start_date, $end_date, $email)
+    public function scopeFullnameSearch($query, $fullname)
     {
         if (!empty($fullname)) {
-            $query->where('fullname', 'like', '%'.$fullname.'%');
+            $query->where('fullname', 'like', '%'. $fullname .'%');
         }
-        return $query;
     }
 }
