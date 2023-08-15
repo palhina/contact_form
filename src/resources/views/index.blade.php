@@ -40,6 +40,7 @@
                                 @error('lastname')
                                 {{ $message }}
                                 @enderror
+                                <livewire:real-time-validation />
                         </div>
                         <div class="form__error">
                                 @error('firstname')
