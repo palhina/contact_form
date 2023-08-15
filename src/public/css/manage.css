@@ -119,11 +119,6 @@
     max-width: 100%;
 }
 
-.update-form__item-input-content:hover{
-    white-space: normal;
-    overflow: visible;
-}
-
 .delete-form__button-submit {
     width: 50px;
     border: none;

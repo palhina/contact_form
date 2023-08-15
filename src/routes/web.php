@@ -21,8 +21,6 @@ Route::get('/return', [ContactController::class, 'return']);
 // 以下、管理画面の操作
 Route::get('/manage', [ContactController::class, 'manage']);
 // 検索ボタン
-Route::get('/contact/search', [ContactController::class, 'search']);
-// リセットボタン
-Route::get('/manage/reset', [ContactController::class, 'reset']);
+Route::get('/manage/search', [ContactController::class, 'search']);
 // データの削除
 Route::delete('/manage/{contact_id}', [ContactController::class, 'destroy']);

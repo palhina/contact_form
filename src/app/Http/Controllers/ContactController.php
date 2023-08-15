@@ -41,18 +41,39 @@ class ContactController extends Controller
     $contacts = Contact::paginate(10);
     return view ('manage',compact('contacts'));
     }
-    // 検索リセット機能
-    public function reset()
-    {
-    return view ('manage');
-    }
+
     //検索機能
     public function search(Request $request)
     {
-        $contacts = Contact::with('contact')->FullnameSearch($request->fullname)->get();
-        $contacts = Contact::all();
-        return view('manage', compact('contacts'));
+        $fullnameQuery = $request ->input('fullname');
+        $gender = $request ->input('gender');
+        $startDate = $request->input('start_date');
+        $endDate = $request->input('end_date');
+        $emailQuery =  $request ->input('email');
+
+        $query = Contact::query();
+
+        if ($fullnameQuery) {
+        $query->where('fullname', 'LIKE', "%$fullnameQuery%");
+        }
+
+        if ($startDate && $endDate) {
+        $query->whereBetween('created_at', [$startDate, $endDate]);
+        }
+
+        if ($gender !== 'all'){
+            $query->where('gender', $gender);
+        }
+
+        if ($emailQuery) {
+        $query->where('email', 'LIKE', "%$emailQuery%");
+        }
+
+        $results = $query->paginate(10);
+
+        return view('result', compact('results'));
     }
+
     // データの削除
     public function destroy(Request $request)
     {
